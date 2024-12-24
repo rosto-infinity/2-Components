@@ -24,7 +24,7 @@
      
      </label>
 
-     <Checkbox/> 
+    
    </fieldset>
     
   </form>

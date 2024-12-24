@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="checkbox" v-model="checked" />
+    <input type="checkbox"/>
     <label> Lorem, ipsum dolor.</label>
   </div>
 </template>
