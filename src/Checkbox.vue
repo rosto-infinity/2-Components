@@ -1,12 +1,29 @@
 <template>
-  <div>
-    <input type="checkbox"/>
-    <label> Lorem, ipsum dolor.</label>
-  </div>
+
+ 
+    <label>
+      <input type="checkbox" @change="onChange"/>{{ label }}
+    </label>
+ 
+
 </template>
 
 <script setup>
 import { ref } from 'vue';
+const props = defineProps({
+  label: String,
+});
 
-const checked = ref(false);
+const emits =defineEmits(['check', 'uncheck']);
+
+const onChange = (event) => {
+  if (event.target.checked) {
+    emits('check');
+  } else {
+    emits('uncheck');
+  }
+};
+
+console.log(props.label);
+
 </script>
