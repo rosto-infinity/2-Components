@@ -39,7 +39,20 @@ const props = defineProps({
 
 const emits = defineEmits(['update:modelValue']);
 
+
 const handleChange = (event) => {
-  emits('update:modelValue', event.target.checked);
+  emits('update:modelValue', event.currentTarget.checked);
 };
+
+// const emits =defineEmits(['check', 'uncheck']);
+// const handleChange = (event) => {
+//   if (event.currentTarget.checked) {
+//     emits('check', event.currentTarget);
+//   } else {
+//     emits('uncheck', event.currentTarget);
+//   }
+// };
+
+
+
 </script>
